@@ -2,9 +2,12 @@ import React from 'react';
 import TotalPacksVendidos from './TotalPacksVendidos';
 import Usuarios from './Usuarios'
 import TotalPesosVendidos from './TotalPesosVendidos';
-import Packs from './Packs';
 import avatar from './../assets/images/jsola.jpg';
 import camion from './../assets/images/camion.jpg';
+import UnPack from './UnPack';
+import PackDos from './PackDos';
+import PackTres from './PackTres';
+import PackCuatro from './PackCuatro';
 
 
 
@@ -39,7 +42,6 @@ function Dashboard() {
 
                 {/*<!-- Heading */}
                 <div className="sidebar-heading">Actions</div>
-
                 {/* Nav Item - Pages */}
                 <li className="nav-item">
                     <a className="nav-link collapsed" href="/">
@@ -197,7 +199,7 @@ function Dashboard() {
                                         </div>
                                         
                                         <p>Este fue el último producto Vendido</p>
-                                        <a target="_blank" rel="nofollow" href="/"></a>
+                                        {/* <a target="_blank" rel="nofollow" href="/"></a> */}
                                     </div>
                                 </div>
                             </div>
@@ -213,29 +215,29 @@ function Dashboard() {
                                             <div className="col-lg-6 mb-4">
                                                 <div className="card bg-info text-white shadow">
                                                     <div className="card-body">
-                                                    <Packs />
-                                                        Pack Nro 1
+                                                    <UnPack />
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 mb-4">
                                                 <div className="card bg-info text-white shadow">
                                                     <div className="card-body">
-                                                        Pack Nro 2
+                                                        <PackDos />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 mb-4">
                                                 <div className="card bg-info text-white shadow">
                                                     <div className="card-body">
-                                                        Pack Nro 3
+                                                        <PackTres />
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 mb-4">
                                                 <div className="card bg-info text-white shadow">
                                                     <div className="card-body">
-                                                        Pack Nro 4
+                                                        <PackCuatro />
                                                     </div>
                                                 </div>
                                             </div>
