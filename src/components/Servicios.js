@@ -15,7 +15,7 @@ class Servicios extends Component {
         fetch(url)
             .then(response=> response.json())
             .then(datos=>{
-                // console.log(datos)
+                console.log(datos)
                 this.setState({pepito: datos.total})
             })
             .catch(error=>console.log("Error de Servicios" + error))

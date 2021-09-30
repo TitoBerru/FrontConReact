@@ -2,7 +2,7 @@ import React from 'react';
 import TotalPacksVendidos from './TotalPacksVendidos';
 import Usuarios from './Usuarios'
 import TotalPesosVendidos from './TotalPesosVendidos';
-import UltimoPackVendido from './UltimoPackVendido';
+import Packs from './Packs';
 import avatar from './../assets/images/jsola.jpg';
 import camion from './../assets/images/camion.jpg';
 
@@ -188,7 +188,7 @@ function Dashboard() {
                             <div className="col-lg-6 mb-4">
                                 <div className="card shadow mb-4">
                                     <div className="card-header py-3">
-                                        <h6 className="m-0 font-weight-bold text-primary">Ultimo Pack Vendido <UltimoPackVendido /></h6>
+                                        <h6 className="m-0 font-weight-bold text-primary">Ultimo Pack Vendido </h6>
                                          Pack Nro 1
                                     </div>
                                     <div className="card-body">
@@ -213,6 +213,7 @@ function Dashboard() {
                                             <div className="col-lg-6 mb-4">
                                                 <div className="card bg-info text-white shadow">
                                                     <div className="card-body">
+                                                    <Packs />
                                                         Pack Nro 1
                                                     </div>
                                                 </div>
