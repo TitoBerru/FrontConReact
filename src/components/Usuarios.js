@@ -14,31 +14,22 @@ class Usuarios extends Component {
         fetch(url)
             .then(response=> response.json())
             .then(datos=>{
-                console.log(datos.total)
+                // console.log(datos.total)
                 this.setState({pepito: datos.total})
             })
-            .catch(error=>console.log(error))
+            .catch(error=>console.log("Error de Usuarios! " + error))
     }
 
     componentDidMount(){
         this.apiCall()
-        console.log('Me monté!!')
+        // console.log('Me monté!!')
     }
-
-    // componentDidUpdate(){
-    //     console.log('Me actualicé!!')
-    // }
-
-    // componentWillUnmount(){
-    //     alert("me destrui");
-    // }
 
     render(){
         return (
             <div>
-                <h2>Soy un componente de PRUEBA</h2>
-                
-                <p> {this.state.pepito} </p>
+                <h1>{this.state.pepito}</h1>
+            
                 
             </div>
         )

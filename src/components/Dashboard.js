@@ -1,5 +1,13 @@
 import React from 'react';
+import TotalPacksVendidos from './TotalPacksVendidos';
 import Usuarios from './Usuarios'
+import TotalPesosVendidos from './TotalPesosVendidos';
+import UltimoPackVendido from './UltimoPackVendido';
+import avatar from './../assets/images/jsola.jpg';
+import camion from './../assets/images/camion.jpg';
+
+
+
 
 function Dashboard() {
     return (
@@ -13,7 +21,7 @@ function Dashboard() {
                     <div className="sidebar-brand-icon">
                         <i className="fas fa-chart-line"></i>
                     </div>
-                    <div className="sidebar-brand-text mx-3">Admin</div>
+                    <div className="sidebar-brand-text mx-3">Administrador</div>
                 </a>
 
                 {/* Divider */}
@@ -36,7 +44,7 @@ function Dashboard() {
                 <li className="nav-item">
                     <a className="nav-link collapsed" href="/">
                         <i className="fas fa-fw fa-folder"></i>
-                        <span>Pages</span>
+                        <span>Paginas</span>
                     </a>
                 </li>
 
@@ -44,14 +52,14 @@ function Dashboard() {
                 <li className="nav-item">
                     <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-chart-area"></i>
-                        <span>Charts</span></a>
+                        <span>Datos</span></a>
                 </li>
 
                 {/* Nav Item - Tables */}
                 <li className="nav-item">
                     <a className="nav-link" href="/">
                         <i className="fas fa-fw fa-table"></i>
-                        <span>Tables</span></a>
+                        <span>Tablas</span></a>
                 </li>
 
                 {/* Divider */}
@@ -99,8 +107,8 @@ function Dashboard() {
                             {/* Nav Item - User Information */}
                             <li className="nav-item dropdown no-arrow">
                                 <a className="nav-link dropdown-toggle" href="/" id="userDropdown">
-                                    <span className="mr-2 d-none d-lg-inline text-gray-600 small">Walter White</span>
-                                    <img className="img-profile rounded-circle" src="assets/images/dummy-avatar.jpg" width="60" alt="dummy"/>
+                                    <span className="mr-2 d-none d-lg-inline text-gray-600 small">Bienvenido!</span>
+                                    <img className="img-profile rounded-circle" src={avatar} width="60" alt="dummy"/>
                                 </a>
                             </li>
 
@@ -114,7 +122,7 @@ function Dashboard() {
 
                         {/* Page Heading */}
                         <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                            <h1 className="h3 mb-0 text-gray-800">App Dashboard</h1>
+                            <h1 className="h3 mb-0 text-gray-800">YoTeMudo Dashboard</h1>
                         </div>
 
                         {/* Content Row */}
@@ -126,8 +134,8 @@ function Dashboard() {
                                     <div className="card-body">
                                         <div className="row no-gutters align-items-center">
                                             <div className="col mr-2">
-                                                <div className="text-xs font-weight-bold text-primary text-uppercase mb-1"> Products in Data Base</div>
-                                                <div className="h5 mb-0 font-weight-bold text-gray-800">135</div>
+                                                <div className="text-xs font-weight-bold text-primary text-uppercase mb-1"> Total de Packs Vendidos</div>
+                                                <div className="h5 mb-0 font-weight-bold text-gray-800"><TotalPacksVendidos /></div>
                                             </div>
                                             <div className="col-auto">
                                                 <i className="fas fa-clipboard-list fa-2x text-gray-300"></i>
@@ -143,8 +151,8 @@ function Dashboard() {
                                     <div className="card-body">
                                         <div className="row no-gutters align-items-center">
                                             <div className="col mr-2">
-                                                <div className="text-xs font-weight-bold text-success text-uppercase mb-1"> Amount in products</div>
-                                                <div className="h5 mb-0 font-weight-bold text-gray-800">$546.456</div>
+                                                <div className="text-xs font-weight-bold text-success text-uppercase mb-1"> Valores Totales de Venta en $</div>
+                                                <div className="h5 mb-0 font-weight-bold text-gray-800"><TotalPesosVendidos /></div>
                                             </div>
                                             <div className="col-auto">
                                                 <i className="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -160,11 +168,11 @@ function Dashboard() {
                                     <div className="card-body">
                                         <div className="row no-gutters align-items-center">
                                             <div className="col mr-2">
-                                                <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">Users quantity
+                                                <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">Cantidad de Usuarios Registrados
                                                 </div>
-                                                <div className="h5 mb-0 font-weight-bold text-gray-800">38</div>
+                                                <div className="h5 mb-0 font-weight-bold text-gray-800"><Usuarios/></div>
                                             </div>
-                                            <Usuarios/>
+                                            
                                             <div className="col-auto">
                                                 <i className="fas fa-user-check fa-2x text-gray-300"></i>
                                             </div>
@@ -180,15 +188,16 @@ function Dashboard() {
                             <div className="col-lg-6 mb-4">
                                 <div className="card shadow mb-4">
                                     <div className="card-header py-3">
-                                        <h6 className="m-0 font-weight-bold text-primary">Ultimo Pack Vendido</h6>
+                                        <h6 className="m-0 font-weight-bold text-primary">Ultimo Pack Vendido <UltimoPackVendido /></h6>
+                                         Pack Nro 1
                                     </div>
                                     <div className="card-body">
                                         <div className="text-center">
-                                            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src="assets/images/product_dummy.svg" alt="dummy"/>
+                                            <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" src={camion} alt="dummy"/>
                                         </div>
                                         
                                         <p>Este fue el último producto Vendido</p>
-                                        <a target="_blank" rel="nofollow" href="/">View product detail</a>
+                                        <a target="_blank" rel="nofollow" href="/"></a>
                                     </div>
                                 </div>
                             </div>
@@ -197,39 +206,39 @@ function Dashboard() {
                             <div className="col-lg-6 mb-4">						
                                 <div className="card shadow mb-4">
                                     <div className="card-header py-3">
-                                        <h6 className="m-0 font-weight-bold text-primary">Categories in Data Base</h6>
+                                        <h6 className="m-0 font-weight-bold text-primary">Cantidad de Packs en la Base de Datos</h6>
                                     </div>
                                     <div className="card-body">
                                         <div className="row">
                                             <div className="col-lg-6 mb-4">
                                                 <div className="card bg-info text-white shadow">
                                                     <div className="card-body">
-                                                        Category 01
+                                                        Pack Nro 1
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 mb-4">
                                                 <div className="card bg-info text-white shadow">
                                                     <div className="card-body">
-                                                        Category 02
+                                                        Pack Nro 2
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 mb-4">
                                                 <div className="card bg-info text-white shadow">
                                                     <div className="card-body">
-                                                        Category 03
+                                                        Pack Nro 3
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="col-lg-6 mb-4">
                                                 <div className="card bg-info text-white shadow">
                                                     <div className="card-body">
-                                                        Category 04
+                                                        Pack Nro 4
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="col-lg-6 mb-4">
+                                            {/* <div className="col-lg-6 mb-4">
                                                 <div className="card bg-info text-white shadow">
                                                     <div className="card-body">
                                                         Category 05
@@ -242,7 +251,7 @@ function Dashboard() {
                                                         Category 06
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
                                 </div>
